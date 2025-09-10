@@ -30,17 +30,6 @@ public class ProductController {
         return ResponseEntity.ok(productService.getProductById(id));
     }
 
-    // ✅ Get active products
-    @GetMapping("/active")
-    public ResponseEntity<List<ProductEntity>> getActiveProducts() {
-        return ResponseEntity.ok(productService.getActiveProducts());
-    }
-
-    // ✅ Create new product
-    @PostMapping
-    public ResponseEntity<ProductEntity> createProduct(@Valid @RequestBody ProductEntity product) {
-        return ResponseEntity.ok(productService.addProduct(product));
-    }
 
     // ✅ Create multiple products
     @PostMapping("/bulk")

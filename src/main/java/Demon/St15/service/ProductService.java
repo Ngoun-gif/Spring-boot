@@ -61,10 +61,6 @@ public class ProductService {
         productRepository.delete(product);
     }
 
-    // ✅ Additional useful methods
-    public List<ProductEntity> getActiveProducts() {
-        return productRepository.findByIsActiveTrue();
-    }
 
     public List<ProductEntity> getProductsByPriceGreaterThan(Double minPrice) {
         return productRepository.findByPriceGreaterThan(minPrice);
